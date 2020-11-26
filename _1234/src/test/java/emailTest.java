@@ -25,8 +25,8 @@ public class emailTest {
         option.prepare("997845792@qq.com");
         assertEquals("997845792@qq.com",option.mailbox_rece);
         option.set_email("test","test1","this is test","this is test1");
-        assertEquals("test",option.title);
-        assertEquals("this is test",option.content);
+        assertEquals("test1",option.title);
+        assertEquals("this is test1",option.content);
         option.send_email();
     }
 }
