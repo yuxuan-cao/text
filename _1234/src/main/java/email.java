@@ -18,13 +18,13 @@ public class email {
         email.setAuthenticator(new DefaultAuthenticator("yuxuan7419@163.com", "OTUWLQOUFMHVKFRL"));
         //email.setSSLOnConnect(true);
         email.setFrom("yuxuan7419@163.com");
-        if (title1.length()>title2.length()){//将主题和内容长的作为发邮件的主题和内容T
+        if (title1.length()<title2.length()){//将主题和内容长的作为发邮件的主题和内容T
             title=title1;
         }
         else {
             title=title2;
         }
-        if (content1.length()>content2.length()){
+        if (content1.length()<content2.length()){
             content=content1;
         }
         else {
@@ -35,6 +35,7 @@ public class email {
         email.addTo(this.mailbox_rece);
     }
     public void send_email()throws EmailException {
-        if (this.mailbox_rece=="997845792@qq.com") email.send();
+       // if (this.mailbox_rece=="997845792@qq.com")
+            email.send();
     }
 }

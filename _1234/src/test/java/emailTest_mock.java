@@ -21,14 +21,14 @@ public class emailTest_mock {
         //System.out.println(list.get(0));
         /* 没有设置则返回 null */
        // System.out.println(list.get(1));
-        email list = new email();
-        email spy = spy(list);
-        spy.prepare("99782@qq.com");
-        System.out.println(0);
-        spy.set_email("test","test1","this is test","this is test1");
-        System.out.println(0);
+        email list = mock(email.class);
+      //  email spy = spy(list);
+       list.prepare("997845792@qq.com");
+     //   System.out.println(0);
+        list.set_email("test","test1","this is test","this is test1");
+      //  System.out.println(0);
         //doNothing().when(spy).send_email();
-        doThrow(new RuntimeException("异常")).when(spy).send_email();
+        doThrow(new RuntimeException("异常")).when(list).send_email();
 //use mock object
         //when(mockedList.prepare("99")).thenReturn();
         //verify(mockedList).send_email();
